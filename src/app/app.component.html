@@ -1,0 +1,32 @@
+<nav id="navbar" class="nav">
+    <ul class="nav-list">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/list">Contatos</a></li>
+        <li><a routerLink="/two-way-biding">Adicionar Contato</a></li>
+        <li><a routerLink="/updateContatos">Atualizar Contatos</a></li>
+    </ul>
+
+
+</nav>
+<section id="welcome-section" class="welcome-section">
+    <form id="survey-form">
+        <h1>Agenda</h1>
+        <nav>
+            <ul id="form-ul">
+                <li><a routerLink="/list">Lista de Contatos</a></li>
+                <li><a routerLink="/two-way-biding">Criar Usuario</a></li>
+            </ul>
+        </nav>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </form>
+</section>
+<footer>
+    <p>
+        &copy; Created by
+        <a>
+            <a href="https://www.instagram.com/carlos_e.fs/" target="_blank">CarlosFSouza</a>
+        </a>
+    </p>
+</footer>
