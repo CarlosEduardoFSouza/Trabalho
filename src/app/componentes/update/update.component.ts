@@ -11,35 +11,31 @@ import { ListService } from 'src/app/servicos/list.service';
 })
 export class UpdateComponent implements OnInit{
   
-  nome: string = '';
-  telefone: string = '';
-  email: string = '';
-  empresa: string = '';
-
   contato: Contato = {
     id: 0,
-    nome: this.nome,
-    telefone: this.telefone,
-    email: this.email,
-    empresa: this.empresa
+    nome: '',
+    telefone: '',
+    email: '',
+    empresa: ''
   }
   
-  id!: any;
-  constructor(private listService: ListService, private router: Router, private route: ActivatedRoute) {
+  constructor(private listService: ListService, private route: ActivatedRoute, private router: Router) {
     
   }
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.listService.getItem(this.id).subscribe(res => {
-      
-    });
+  
   }
 
   updateContatos() {
-    this.listService.updateUser(this.contato.id, this.contato).subscribe( res => {
-
+    const id = Number(this.route.snapshot.paramMap.get("id"))
+    this.listService.updateUser(id, this.contato).subscribe(res => {
+      this.contato.nome = res.nome;
+      this.contato.telefone = res.telefone;
+      this.contato.email = res.email;
+      this.contato.empresa = res.empresa;
+      
     })
+    this.router.navigate(['/list']);
   }
-
 }

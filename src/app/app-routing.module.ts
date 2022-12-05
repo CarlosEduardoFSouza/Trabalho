@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'pipes', component: PipesComponent},
   {path: 'two-way-biding', component: TwoWayBidingComponent},
   {path: 'form', component: DataFormComponent},
-  {path: 'updateContatos', component: UpdateComponent},
+  {path: 'updateContatos/:id', component: UpdateComponent},
 
 
 ];

@@ -27,12 +27,4 @@ export class ListRenderComponent implements OnInit {
   getAnimais() {
     this.listService.getAll().subscribe((contatos) => (this.contatos = contatos));
   }
-
-  updateContatos(id: number, contato: Contato, nome: string) {
-    this.listService.updateUser(id, contato).subscribe(res => {
-      contato.nome = nome;
-      this.listService.setItem(contato).subscribe();
-      this.router.navigate(['/list']);
-    })
-  }
 }
