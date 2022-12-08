@@ -26,7 +26,6 @@ export class TwoWayBidingComponent implements OnInit {
   
   constructor(private listService: ListService, private router: Router) {
   
-
    }
 
   ngOnInit(): void {
@@ -37,7 +36,7 @@ export class TwoWayBidingComponent implements OnInit {
     this.contato.telefone = telefone;
     this.contato.email = email;
     this.contato.empresa = empresa;
-    this.listService.setItem(this.contato).subscribe();
+    this.listService.setContato(this.contato).subscribe();
     this.router.navigate(['/list']);  
   }
 

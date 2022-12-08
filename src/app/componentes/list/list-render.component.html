@@ -3,10 +3,8 @@
     <ul id="lista-contatos">
         <li id="contatos" *ngFor="let contato of contatos">
             Nome: <a routerLink="/list/{{contato.id}}">{{contato.nome}}<br></a> - Telefone: {{contato.telefone}}<br> - Email: {{contato.email}}<br> - Empresa: {{contato.empresa}}
-            <button (click)="removeAnimal(contato)">Excluir</button>
-            <button type="button" [routerLink]="['/updateContatos/', contato.id]">Update</button>
-            
+            <button (click)="removeContato(contato)">Excluir</button>
+            <button type="button" [routerLink]="['/updateContatos/', contato.id]">Atualizar</button>   
         </li>
     </ul>
-
 </div>

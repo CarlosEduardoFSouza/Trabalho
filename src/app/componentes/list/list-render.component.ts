@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Contato } from 'src/app/Contato';
 import { ListService } from 'src/app/servicos/list.service';
 
@@ -12,19 +11,17 @@ import { ListService } from 'src/app/servicos/list.service';
 export class ListRenderComponent implements OnInit {
   contatos: Contato[] = [];
 
-  constructor(private listService: ListService, private router: Router) {
-    this.getAnimais();
+  constructor(private listService: ListService) {
+    this.getContatos();
   }
   ngOnInit(): void {
   }
 
-  removeAnimal(contato: Contato) {
-    // Remove o Animal do front-end
+  removeContato(contato: Contato) {
     this.contatos = this.contatos.filter((a) => contato.id !== a.id);
-    // Remove efetivamente do banco
-    this.listService.remove(contato.id).subscribe();
+    this.listService.removeContato(contato.id).subscribe();
   }
-  getAnimais() {
+  getContatos() {
     this.listService.getAll().subscribe((contatos) => (this.contatos = contatos));
   }
 }

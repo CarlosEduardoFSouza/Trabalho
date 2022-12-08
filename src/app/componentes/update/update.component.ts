@@ -29,7 +29,7 @@ export class UpdateComponent implements OnInit{
 
   updateContatos() {
     const id = Number(this.route.snapshot.paramMap.get("id"))
-    this.listService.updateUser(id, this.contato).subscribe(res => {
+    this.listService.updateContato(id, this.contato).subscribe(res => {
       this.contato.nome = res.nome;
       this.contato.telefone = res.telefone;
       this.contato.email = res.email;

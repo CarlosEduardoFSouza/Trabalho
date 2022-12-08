@@ -59,6 +59,12 @@ input {
     cursor: pointer
 }
 
+h2 {
+    color: white;
+    margin-top: 41px;
+    margin-bottom: -46px;
+}
+
 h4 {
     margin-top: 15px;
 }

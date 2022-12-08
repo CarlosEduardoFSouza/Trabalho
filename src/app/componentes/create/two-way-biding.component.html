@@ -1,4 +1,5 @@
 <div class="aula">
+    <h2>Criar Contato</h2>
     <form id="survey-form" (ngSubmit)="incluiContato(nome, telefone, email, empresa)">
         <div class="form-group" >
             <label id="name-label" for="name">Nome</label>
@@ -16,7 +17,7 @@
             <label id="name-label" for="name">Empresa</label>
             <input type="text" [(ngModel)]='empresa' name="empresa"  placeholder="Digite o nome da sua Empresa">
         </div>
-        <input id="input-enviar" type="submit" value="Enviar">
+        <input id="input-enviar" type="submit" value="Criar Contato">
     </form>
     <div *ngIf="nome!='' ">
     </div>
