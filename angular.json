@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "curso-angular": {
+    "Trabalho-Angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/curso-angular",
+            "outputPath": "dist/Trabalho-Angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "curso-angular:build:production"
+              "browserTarget": "Trabalho-Angular:build:production"
             },
             "development": {
-              "browserTarget": "curso-angular:build:development"
+              "browserTarget": "Trabalho-Angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "curso-angular:build"
+            "browserTarget": "Trabalho-Angular:build"
           }
         },
         "test": {
